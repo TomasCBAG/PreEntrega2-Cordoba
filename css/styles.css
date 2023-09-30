@@ -1,0 +1,242 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100&family=Outfit:wght@500&family=PT+Serif:wght@700&family=Roboto:ital,wght@0,300;0,700;1,700&display=swap');
+
+
+body{
+   background-image: url(../assets/img/patter.png); 
+}
+
+.texto{
+    margin: 10px;
+    font-family: 'PT Serif', serif;
+}
+
+
+h1 a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Outfit', sans-serif;
+}
+.cuerpo{
+    gap: 10px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 3fr 4fr;
+    grid-template-areas: 
+    "img1"
+    "img2"
+    "texto1"
+    "Pie1";
+}
+.imagen-uno{
+    grid-area: img1;
+}
+
+.imagen-dos{
+    grid-area: img2;
+}
+
+.texto{
+    
+   
+    grid-area: texto1;
+}
+
+footer{
+    grid-area: Pie1 ;
+    justify-content: center;
+}
+
+
+
+@media (min-width: 450px){
+    .img-in{
+        width: 225px;
+    }
+
+    .cuerpo{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr 1fr 1fr;
+        
+        grid-template-areas: 
+        "img1 img2"
+        "texto1 texto1"
+        "Pie1 Pie1";
+    }
+
+    
+}
+
+
+/** Mewnu **/
+.Navegacion{
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.818);
+    height: 45px;
+    padding: 2px;
+    position: relative;
+}
+.chek, .Iconos{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    cursor: pointer;
+}
+.chek{
+    opacity: 0;
+}
+
+.Iconos{
+    pointer-events: none;
+}
+
+#cerrar{
+    display: none;
+}
+
+.chek:checked~#abrir{
+    display: none;
+}
+.chek:checked~#cerrar{
+    display: flex;
+}
+
+.Menu{
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.822);
+    width: 200px;
+    height: 844px;
+    position: absolute;
+    top: 50px;
+    right: 1px;
+    display: none;
+}
+
+.Menu li{
+    list-style: none;
+}
+
+.Menu li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 10px 12px;
+   
+}
+.Menu li a:hover{
+    color: white;
+    background-color: black;
+    box-shadow: 5px 5px 40px rgba(255, 111, 0, 0.971);
+}
+
+.chek:checked~.Menu{
+    display: block;
+}
+
+/**pagina*/
+
+
+
+p{
+    gap: 100px;
+    
+    display: flex;
+    color: white;
+    background-color: black;
+}
+
+
+/**XBOX*/
+.Cuerpo-xbox{
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    text-align: center;
+    gap: 10px;
+    
+}
+
+.Juego{
+   
+    text-align: center;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.793);
+    height: 700px;
+    width: auto;
+}
+.Juego h2{
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+.descrip{
+
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.816);
+    overflow: auto;
+    width: 250px;
+    height: 100px;
+}
+
+.descrip h3{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.descrip p{
+    font-family: 'Martian Mono', monospace;
+    color: rgb(255, 255, 255);
+}
+
+@media(min-width: 768px){
+    .Cuerpo-xbox{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+    }
+}
+
+@media(min-width:1440px){
+    .Cuerpo-xbox{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+@media(min-width: 2080px){
+    .Cuerpo-xbox{
+        grid-template-columns: repeat(4, 1fr);
+        
+    }
+}
+
+/**Footer*/
+.Pagos{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.522);
+    width: auto;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+.Medios-p{
+    color: white;
+    text-align: center;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    width: 150px;
+    height: 150px;
+}
+
